@@ -22,8 +22,8 @@ public class FileLoggerConfiguration {
         formatRecording = "[" + new Date() + "] \t [" +  loggingLevel + "] \t ";
         if (myFile.length()+message.length() <= MAX_LENGTH){
             try {
-                FileOutputStream fileOutputStream = new FileOutputStream("fileoutputstream_example.txt");
-                byte[] textBytes = ("[" + new Date() + "] \t [" +  loggingLevel + "] \t " + message).getBytes();
+                FileOutputStream fileOutputStream = new FileOutputStream(myFile, true);
+                byte[] textBytes = ("[" + new Date() + "] \t [" +  loggingLevel + "] \t " + message + "\n").getBytes();
                 fileOutputStream.write(textBytes);
                 fileOutputStream.close();
             } catch (IOException e) {
