@@ -4,7 +4,9 @@ import ua.ithilell.hw9.exceptions.FileMaxSizeReachedException;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class FileLoggerConfiguration {
     private File myFile = new File("./log-file.txt");
@@ -17,6 +19,9 @@ public class FileLoggerConfiguration {
     public FileLoggerConfiguration(LoggingLevel loggingLevel) {
         this.loggingLevel = loggingLevel;
     }
+
+
+
 
     public void write(String message) throws FileMaxSizeReachedException {
         formatRecording = "[" + new Date() + "] \t [" +  loggingLevel + "] \t ";
