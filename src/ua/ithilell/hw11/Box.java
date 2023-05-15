@@ -1,6 +1,8 @@
 package ua.ithilell.hw11;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Box <T>{
 
@@ -52,6 +54,7 @@ public class Box <T>{
     public float getWeight(){
         float weight = 0;
 
+
         for (Object object:this.objects) {
             if (object!=null){
                switch (object.getClass().getSimpleName()){
@@ -60,6 +63,9 @@ public class Box <T>{
                        break;
                    case "Orange":
                        weight += 1.5F;
+                       break;
+                   default:
+                       System.out.println("Не фрукт");
                        break;
                }
 
@@ -73,7 +79,7 @@ public class Box <T>{
         return this.getWeight() == box.getWeight();
     }
 
-    void merge(Box<T> box){
+    void merge(Box<? extends T> box){
         Object[] mergeObjects = box.getObjects();
         for (int i=0; i<mergeObjects.length; i++){
             if (mergeObjects[i]!=null)
