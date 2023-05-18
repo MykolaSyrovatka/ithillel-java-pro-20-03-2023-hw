@@ -93,7 +93,7 @@ public class HomeWorkMain <T> {
 
         for (int i = 0; i < newList.size() ; i++){
 
-            int count = 1;
+            int count = 0;
             for (int j = 0; j < list.size() ; j++) {
                 if (newList.get(i).equals(list.get(j))){
                     count+=1;
