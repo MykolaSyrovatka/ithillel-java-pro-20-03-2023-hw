@@ -30,6 +30,7 @@ public class HomeWorkMain <T> {
         list.add("Test3");
         System.out.println(countOccurrence(list,"Test"));
         System.out.println(calcOccurance(list));
+        System.out.println(findOccurance(list));
 
         String [] strings = new String[]{"!", "34", "itr"};
         List<Integer> listInteger = new ArrayList<>();
@@ -99,7 +100,6 @@ public class HomeWorkMain <T> {
                 }
                 if (j == list.size()-1){
                     String str = "" + newList.get(i) + ": " + count;
-                    System.out.println(str);
                     newList.set(i, str);
                 }
             }

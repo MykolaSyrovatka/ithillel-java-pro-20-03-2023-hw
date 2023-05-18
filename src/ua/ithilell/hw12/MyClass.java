@@ -12,4 +12,12 @@ public class MyClass {
     public void setOccurrence(int occurrence) {
         this.occurrence = occurrence;
     }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "name='" + name + '\'' +
+                ", occurrence=" + occurrence +
+                "}";
+    }
 }
